@@ -19,18 +19,6 @@ const mailgunAuth = {
   },
 };
 
-// step 2
-// let transporter = nodemailer.createTransport(nodeMailgun(mailgunAuth));
-
-// step 3
-// const mailOptions = {
-//   from: process.env.MAIL_FROM,
-//   to: "toluadeyemo7@gmail.com",
-//   subject: "TEST EMAIL",
-//   html: `<h4>Here is your mail</h4>
-//         <p>${text}</p>`,
-// };
-
 app.post("/send-mail", cors(), async (req, res) => {
   let { text } = req.body;
   const transport = nodemailer.createTransport(nodeMailgun(mailgunAuth));
