@@ -10,13 +10,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-const mailgunAuth = {
-  auth: {
-    api_key: "key-12341234123412341234",
-    domain:
-      "One of your domain names listed at your https://mailgun.com/app/domains",
-  },
-};
+// const mailgunAuth = {
+//   auth: {
+//     api_key: "key-12341234123412341234",
+//     domain:
+//       "One of your domain names listed at your https://mailgun.com/app/domains",
+//   },
+// };
 
 app.post('/send-mail', cors(), async (req, res) => {
     let {text} = req.body
