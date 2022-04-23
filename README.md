@@ -18,3 +18,5 @@ npm installed
 cd ../backend
 npm install
 ```
+
+some update
